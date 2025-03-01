@@ -4,6 +4,17 @@
 
 ---
 
+## 🐳 Running with Docker
+To run the application using Docker, use:
+```sh
+docker run --rm -e CPU_USAGE=2 -e RAM_USAGE_MB=1024 ghcr.io/kla7016/pod-burner:latest
+```
+
+### ⚙️ Explanation:
+- `-e CPU_USAGE=2` → Uses 2 CPU cores. (Default: `1 CPU core`) **Note:** CPU usage must be an integer; decimal values are not allowed.
+- `-e RAM_USAGE_MB=1024` → Allocates 1024MB (1GB) of RAM. (Default: `100MB`)
+---
+
 ## 🚀 Running in Development Mode
 To run the application directly using Go, use the following command:
 ```sh
@@ -14,17 +25,6 @@ CPU_USAGE=2 RAM_USAGE_MB=1024 go run main.go
 - `CPU_USAGE=2` → Uses **2 CPU cores** (Default: `1`)
 - `RAM_USAGE_MB=1024` → Allocates **1024MB (1GB) of RAM** (Default: `100MB`)
 
----
-
-## 🐳 Running with Docker
-To run the application using Docker, use:
-```sh
-docker run --rm -e CPU_USAGE=2 -e RAM_USAGE_MB=1024 ghcr.io/kla7016/pod-burner:latest
-```
-
-### ⚙️ Explanation:
-- `-e CPU_USAGE=2` → Uses 2 CPU cores.
-- `-e RAM_USAGE_MB=1024` → Allocates 1024MB (1GB) of RAM.
 ---
 
 ## 📌 Default Values
